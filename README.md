@@ -11,6 +11,14 @@ about the details of those modules in their respective `README.md`'s.
 You can run the backend with `gradlew api:run` and the frontend with `gradlew app:dev` (`run` also works but dev gives
 nice hot loading features). This should install dependencies you do not already have, so it may take a while first time!
 
+If you don't want to deal with any dependency issues nor want a quick development experience (eg just want to use the
+backend as a server, not edit things). You can run the backend containerized.
+
+```shell
+sudo docker build -t mapuvic-api -f api.Dockerfile .
+sudo docker run -p "8000:8000" mapuvic-api
+```
+
 ## Testing
 
 You can test everything at once with `gradlew test`. Or individual projects with `gradlew app:test`
